@@ -22,9 +22,8 @@ export const typeOrmAsyncConfig: TypeOrmModuleAsyncOptions = {
       username: configService.get<string>('dbUsername'),
       database: configService.get<string>('dbName'),
       password: configService.get<string>('dbPassword'),
-      // entities: ['dist/**/*.entity.js'],
-      entities: [User, Artist, Playlist, Song],
-      synchronize: true,
+      entities: ['dist/**/*.entity.js'],
+      synchronize: false,
       migrations: ['dist/db/migrations/*.js'],
     };
   },
